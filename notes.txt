@@ -1,0 +1,41 @@
+R Programming
+- Statistical Computing
+- introduced in 1993
+- created by Ross Ihaka and Robert Gentleman
+---------------------------------------
+- MultiParadigm - Procedural + OOPS + Functional + Imperative
+- Interpreted
+- Dynamically Typed
+- Statistics / ML / Data Analysis / Data Mining
+- Open Source
+---------------------------------------
+Course Outline / RoadMap to Learn R
+---------------------------------------
+- Basics of R Programming
+  - Variables, Data Types, Input/Print
+- Flow Control
+   - Loops and If Else, Type of Loop, Switch Case
+- Functional Programming
+- Data Structures of R
+   - Strings, Vectors, Matrix, List, Array, Data Frame, Factors
+---------------------------------------
+Data Collection 
+- Web Scraping
+- Files - CSV, Excel, TSV, JSON
+- Database
+
+Data Analysis and Visualization with R
+- apply family
+- Statistical Analysis with R
+- EDA - dplyr
+- Visualization using Base R
+- GGplot
+
+---------------------------------------
+Machine Learning
+- Supervised
+- Unsupervised
+
+
+
+
