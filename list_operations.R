@@ -20,3 +20,36 @@ employees[1]
 employees["e_names"]
 
 
+employees$e_dept
+
+str(employees)
+
+x <- list(3,4,6,3)
+str(x)
+
+employees["e_names"]
+
+
+employees[["e_names"]]
+employees[["e_names"]][1]
+employees[["e_names"]][3]
+
+typeof(employees["e_names"])
+typeof(employees[["e_names"]])
+
+x
+x[1]
+x[[1]]
+
+
+
+employees$e_names
+employees$e_names[1]
+employees$e_names[2]
+employees$e_names[3]
+
+employees$e_names[5] <- "Steve"
+
+
+
+
