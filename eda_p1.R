@@ -86,12 +86,38 @@ df %>%
   arrange(desc(win_by_runs))
 
 
+# mutate - make a new column
+
+mutate(df, Average=mean(win_by_runs))
+View(df)
+
+df %>% 
+  select(season, win_by_runs) %>% 
+  mutate(Average = mean(win_by_runs))
+
+View(mtcars)
+
+# Rank of variables
+mutate_at(mtcars, vars(mpg:hp), funs(Rank = min_rank(.)))
 
 
+# summarise and group_by
+df %>% 
+  group_by(season) %>% 
+  summarise(Average = mean(win_by_runs))
 
 
+df %>% 
+  group_by(winner) %>% 
+  summarise(Average = mean(win_by_runs)) %>% 
+  arrange(desc(Average))
 
-
+# 1. Get total runs by each batsman in descending order
+# 2. Get total wickets by each bowler
+# 3. Get player with most sixes
+# 4. Get fielder with most catches
+# 5. Get individual highest score by players
+# 6. Get team name with highest score
 
 
 
