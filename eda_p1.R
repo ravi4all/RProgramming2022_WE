@@ -112,6 +112,37 @@ df %>%
   summarise(Average = mean(win_by_runs)) %>% 
   arrange(desc(Average))
 
+
+head(mutate(df, new_col = mean(win_by_runs)))
+
+new_df = data.frame(x1=c(3,2,5,1,6), x2=c(12,21,45,33,77))
+new_df
+
+# Multiply all variables with 5
+temp_df <- mutate_all(new_df, funs("new_col" = .*5))
+temp_df
+
+# Calculate Rank for Variables
+temp_df <- mutate_at(new_df, vars(x1:x2), funs(Rank = min_rank(.)))
+temp_df
+
+# Rank in desc order
+temp_df <- mutate_at(new_df, vars(x1:x2), funs(Rank = min_rank(desc(.))))
+temp_df
+
+# Mutate with CASES
+new_df %>% mutate(status = case_when(
+                  is.na(x1) ~ "Not Available",
+                  x1 == 1 ~ "Rank 1",
+                  x1 == 2 ~ "Rank_2",
+                  x1 == 3 ~ "Rank_3",
+                  x1 == 4 ~ "Rank_4",
+                  x1 >= 5 ~ "Rank_6"))
+
+# Row wise operations
+new_df %>% rowwise() %>% mutate(sum_ = sum(x1,x2))
+
+
 # 1. Get total runs by each batsman in descending order
 # 2. Get total wickets by each bowler
 # 3. Get player with most sixes
